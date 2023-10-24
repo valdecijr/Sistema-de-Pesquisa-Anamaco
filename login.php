@@ -1,23 +1,18 @@
-﻿<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Sistema de Monitorias - Claro</title>
-</head>
-
-<body>
-<?PHP include('menu.php'); ?>
-<h1>Login</h1>
-<br>
-<form action="valida.php" method="post">
-	* E-mail
-	<input type="text" name="email_usu" id="email_usu">
-<br><br>
-	* Senha
-	<input type="password" name="senha_usu" id="senha_usu">
-  <br><br>
- 
-  <input type="submit" value="Login" class="but_comando">
-</form>
-</body>
-</html>
+<?php 
+  $login = $_POST['login'];
+  $entrar = $_POST['entrar'];
+  $senha = md5($_POST['senha']);
+  $connect = mysql_connect('127.0.0.1:3306','root','');
+  $db = mysql_select_db('usuarios');
+    if (isset($entrar)) {
+            
+      $verifica = mysql_query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'") or die("erro ao selecionar");
+        if (mysql_num_rows($verifica)<=0){
+          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='index.html';</script>";
+          die();
+        }else{
+          setcookie("login",$login,time()+21600);
+          header("Location:teste.php");
+        }
+    }
+?>
