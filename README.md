@@ -1,4 +1,15 @@
-# PROJETO PARA AUTOMAÇÃO DE ENVIOS MSG WHATSAPP
+# PROJETOS UTILIZANDO LINGUAGENS COMO PHP, HTML, CSS, JAVASCRIPT E PYTHON
+
+PROJETO IBBCA - SISTEMA PARA CADASTRO DE PROPOSTAS
+O Projeto foi desenvolvido para cdastro de propostas feitas para excessão de clientes.
+
+Recursos:
+- Script PHP de cadastro;
+- Script PHP de upgrade;
+- Script PHP de delete;
+- Script PHP de limpar cache;
+
+PROJETO PARA AUTOMAÇÃO DE ENVIOS MSG WHATSAPP
 O Projeto foi desenvolvido para automatizar o processo de envio de mensagens em texto, imagems e arquivos para múltiplos clientes.
 
 Recursos:
